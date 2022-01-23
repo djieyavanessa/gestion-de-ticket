@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket d enregistrement</title>
+    <link rel="stylesheet" href="design.css" type="text/css"> 
+</head>
+<body>
+    
+        
+        
+        <div class="Conteneur">
+        <section>
+            <h2>Formulaire d' enregistrement </h2>
+          <form id="monForm" action="resultat.php" method="post">
+           <!-- <form id="monForm" action="mailto:djieyavaessa@yahoo.fr" method="post">-->
+            
+            
+            
+            <fieldset> 
+      
+            <table>
+              <tr>
+              <td> 
+                   <fieldset>
+                <legend> Contact</legend>
+                <br/>
+                <fieldset>
+                  <legend>civilite</legend> 
+
+                  <div>
+                    <input type="radio" id="Mr" name="drone" value="Mr"
+                           checked>
+                    <label for="Mr">Mr</label>
+                  </div>
+                  
+                  <div>
+                    <input type="radio" id="Mme" name="drone" value="Mme">
+                    <label for="dewey">Mme</label>
+                  </div>
+                  
+                  <div>
+                    <input type="radio" id="Mlle" name="drone" value="Mlle">
+                    <label for="louie">Mlle</label>
+                  </div>
+                  
+                  
+                </fieldset><br/>
+                <label for="nom" > nom:</label><input id="nom"  type="text" required="required" /><br/>
+                <label for="prenom">prenmon: </label><input id="prenom" type="text" required="required"/><br/>
+                <label for="adresse">adresse: </label><input id="adresse" type="text" required="required" placeholder="Example:32 Rue vererie,1075-siegen" /><br/>
+                <label for="Telephone"> telephone:</label> <input placeholder="EX: 1763254"  id="telephone" type="tel" /><br/>
+                <label for="Email"> Email:</label> <input id="mail" type="email" required="required" placeholder="Ex:arety@gmail.fr"/><br/>
+                </fieldset>
+              </td>
+              </tr>
+      
+              <tr>
+              <td>
+                  
+                <fieldset>
+                  <legend>Information personelles</legend>
+                  <label for="datenaiss" > date de naissance:</label><input id="datenaiss"  type="date"/><br/>
+                  
+                   <br/>
+                   <label for="nom de projet" > nom de projet:</label><input id="nom de projet"  type="text" required="required" /> <br/>
+                </fieldset>
+                
+                
+              </td>
+            </tr>
+      
+              <tr>
+                <td>  <br/><br/>
+               
+                  <label for="message"> Liste  des taches </label><textarea id="message" cols="40" rows="4" required="required"
+                   placeholder="saisir les taches ici"></textarea>
+                </td> 
+
+                <td> <input id="Submit1" type="submit" value="envoyer"/>
+                     <input id="Reset1" type="reset" value="effacer"/>
+                     <button type="button" onclick="Validation_form()">test de validite</button>
+                    
+                </td>
+              </tr>
+              
+      
+      
+            </table>
+      
+          </fieldset>
+      
+      
+      
+            
+      
+      </form>
+        </section> 
+        
+      </div>
+      <!--
+      <?php
+      echo 'civilite : '.$_POST["drone"].'<br>';
+      echo'Nom': '.$_POST["nom].'<br>
+      echo 'Prénom : '.$_POST["prenom"].'<br>';
+      echo 'Email : ' .$_POST["mail"].'<br>';
+      echo 'Adresse : ' .$_POST["adresse"].'<br>';
+      echo 'telephone : ' .$_POST["telephone"].'<br>';
+      echo 'date de naissance : ' .$_POST["datenaiss"].'<br>';
+      echo 'nom de projet : ' .$_POST["nom de projet"].'<br>';
+      echo 'message : ' .$_POST["message"].'<br>';
+  ?> -->
+
+  <script type="text/javascript">
+      var monForm = document.getElementById("monForm");
+      var Validation_form = function (){
+          if(monForm.checkValidity())
+          // si le formulaire est valide
+          window.alert("le formulaitre est valide");
+          else
+          // si le formulaire est invalide
+          window.alert("le formulaire est non valide");
+      }
+
+
+
+  </script>
+</body>
+</html>
